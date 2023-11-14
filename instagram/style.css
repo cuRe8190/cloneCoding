@@ -1,0 +1,188 @@
+body {
+  background-color: #c6c6c6;
+  margin: 0px;
+}
+
+p {
+  margin: 0;
+}
+
+.wrap {
+  background-color: white;
+  width: 375px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.instagram {
+  width: 100%;
+  height: 550px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 375px 1fr;
+  grid-template-areas: 
+  "header"
+  "img"
+  "footer";
+
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.header {
+  grid-area: header;
+  width: auto;  /*마진 값 포함해서 알아서 적용되도록 설정*/
+  height: auto;
+  margin: 7.5px 10px ;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  /* display: flex; */
+}
+
+.header p {
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.header-left {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.header-left div {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.header-left div p {
+  font-size: 10px;
+  font-weight: lighter;
+  line-height: 0.9em;  
+}
+
+.header-img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  
+  margin-right: 10px;
+}
+
+.header-right {
+  float: right;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.header-right p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.img {
+  clear: both;
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('./img/btd.jpg');
+  background-size: cover;
+}
+
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 50px 20px 60px;
+  grid-template-areas: 
+  "top-left top-center top-right"
+  "like like like"
+  "comment comment comment";
+}
+
+.top-left {
+  grid-area: top-left;
+
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+
+.top-center {
+  grid-area: top-center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right {
+  grid-area: top-right;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-left: 75px;
+
+  font-size: 20px;
+}
+
+.like {
+  grid-area: like;
+  font-size: 12px;
+  font-weight: bold;
+
+  margin-left: 12.5px;
+  margin-bottom: 5px;
+}
+
+.comment {
+  grid-area: comment;
+  font-size: 12px;
+  margin: 0  12.5px;
+
+  height: 45px;
+  overflow: hidden;
+}
+
+.fi-rr-paper-plane-top {
+  width: 15px;
+  transform: rotate(-30deg);
+}
+
+ul {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 20%;
+}
+
+li {
+  width: 5px;
+  height: 5px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+}
+
+ul .now {
+  background-color: #329fff;
+}
