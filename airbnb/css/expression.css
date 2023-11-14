@@ -1,0 +1,81 @@
+.expression {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  grid-template-areas: 
+  "heading heading"
+  "div1 div2";
+
+  margin-bottom: 40px;
+}
+
+.expression .heading {
+  grid-area: heading;
+}
+
+
+@media screen and (max-width: 576px) {
+  .expression {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    grid-template-areas: 
+    "heading"
+    "div1"
+    "div2";
+  }  
+}
+.expression .photo-div {
+  width: 100%;
+  height: 700px;
+  padding: 60ox;
+  border-radius: 14px;
+}
+
+.expression .photo-div:nth-of-type(1) {
+  background-image: url("../img/dog.jpg");
+  background-size: cover;
+  background-position: 20%;
+  /* grid-area: div1; */
+}
+
+.expression .photo-div:last-child {
+  background-image: url("../img/cat.jpg");
+  background-size: cover;  
+  background-position-y: 50%;
+  /* grid-area: div2; */
+}
+
+.expression .photo-div p {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  
+  padding: 40px 0px 15px 40px;
+}
+
+.expression .photo-div button {
+  background-color: white;
+  border-radius: 14px;
+  
+  color: black;
+  font-weight: bold;
+  
+  padding: 15px 24px;
+  margin-left: 40px;
+}
+
+.expression .photo-div:last-child p {
+  color: black;
+}
+
+.expression .photo-div:last-child button {
+  color: white;
+  background-color: black;
+}
+
+.expression .photo-div button:hover {
+  background-color: gray;
+  color: white;
+}
