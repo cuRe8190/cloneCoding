@@ -29,20 +29,25 @@
 
   .recent-menu-item {
     box-sizing: content-box;
-    padding-left: 16px;
+    position: relative;
+    padding-right: 16px;
     width: 80px;
+    height: 122px;
     text-align: center;
     flex-shrink: 0;
 
-    &.is-ordered:nth-last-child(3) {
-      // &:last-of-type {
-        padding-right: 16px;
-        border-right: 1px solid $booking-color-bg102;
-      // }
+    &:first-child {
+      padding-left: 16px;
     }
 
-    &:last-child {
-      padding-right: $m-padding;
+    &.is-ordered:nth-last-child(4) {
+      content: '';
+      padding-right: 16px;
+      border-right: 1px solid $booking-color-bg102;
+
+      & + .recent-menu-item {
+        padding-left: 16px;
+      }
     }
   }
 
@@ -77,8 +82,8 @@
 
   .badge-cart {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 50px;
+    right: 16px;
     padding: 6px;
     border: 1px solid $booking-color-border150;
     border-radius: 100%;
@@ -96,13 +101,13 @@
     margin-top: 8px;
     font-size: 14px;
     font-weight: 600;
-    @include ellipse;
+    @include ellipsis;
   }
 
   .menu-price {
     font-size: 13px;
     font-weight: 700;
     color: $point-color;
-    @include ellipse;
+    @include ellipsis;
   }
 }

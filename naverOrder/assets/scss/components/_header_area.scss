@@ -23,7 +23,7 @@
       align-items: center;
       font-size: 20px;
       font-weight: bold;
-      @include ellipse;
+      @include ellipsis;
 
       .link-back {
         display: flex;
@@ -41,7 +41,7 @@
       width: 70px;
       line-height: 50px;
       text-align: center;
-      @include ellipse;
+      @include ellipsis;
     }
   }
 

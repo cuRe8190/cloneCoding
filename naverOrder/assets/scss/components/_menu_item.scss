@@ -91,6 +91,7 @@
       font-size: 12px;
       border: 0;
       background-color: #eee;
+      font-weight: 700;
       color: #777;
       cursor: not-allowed;
       pointer-events: none;
@@ -126,9 +127,11 @@
 
   .menu-number-of-order {
     color: $booking-color-text5;
+    letter-spacing: -0.4px;
 
     strong {
       margin-left: 4px;
+      font-weight: 800;
       font-style: normal;
       color: $booking-color-text6;
     }
