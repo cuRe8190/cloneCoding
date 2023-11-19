@@ -355,6 +355,10 @@ body.scroll-off {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.06);
 }
+.menu-item .menu-img-area .right {
+  -o-object-position: 1px;
+     object-position: 1px;
+}
 .menu-item .menu-img-area .menu-img {
   display: block;
   -o-object-fit: cover;
@@ -795,6 +799,13 @@ body.scroll-off {
   color: #333;
   letter-spacing: -0.3px;
 }
+.menu-list-area .btn-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -16px;
+  padding: 16px;
+}
 .menu-list-area .period {
   font-size: 14px;
   letter-spacing: -0.3px;
@@ -1007,19 +1018,6 @@ body.scroll-off {
   margin-right: 6px;
 }
 
-.dimmed-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
-}
-.dimmed-layer.light {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .order-type-popup {
   position: fixed;
   left: 0;
@@ -1167,6 +1165,20 @@ body.scroll-off {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.recent-order-area .badge-cart .num {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  background-color: #ff232b;
+  font-size: 8px;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
 }
 .recent-order-area .ico-cart {
   width: 16px;
@@ -1532,9 +1544,25 @@ body.scroll-off {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   overflow: hidden;
+  z-index: 1;
+}
+.option-popup-area.show {
+  height: 100%;
+  opacity: 1;
   z-index: 5000;
+}
+.option-popup-area.show .dimmed-layer {
+  opacity: 1;
+}
+.option-popup-area.show .menu-option-popup {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.option-popup-area .dimmed-layer {
+  position: absolute;
+  opacity: 0;
 }
 .option-popup-area .menu-option-popup {
   position: fixed;
@@ -1550,6 +1578,12 @@ body.scroll-off {
   max-height: calc(100% - 45px);
   background-color: #f4f7f9;
   z-index: 10000;
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .option-popup-area .menu-option-popup .content-top-pattern {
   position: absolute;
@@ -1557,6 +1591,7 @@ body.scroll-off {
   width: 100%;
   height: 11px;
   fill: white;
+  z-index: 2;
 }
 .option-popup-area .menu-option-popup .content-top {
   border-bottom: 1px solid #ededed;
@@ -1842,6 +1877,7 @@ body.scroll-off {
   font-size: 20px;
   font-weight: 700;
   color: #5565c3;
+  margin-right: 4px;
 }
 .order-content .order-content-top .order-title img {
   width: 20px;
@@ -2219,9 +2255,20 @@ body.scroll-off {
   right: 0;
   width: 56px;
   height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
 }
-.order-form-area .page-title-area .btn-close .ico-close {
+.order-form-area .page-title-area .ico-close {
   width: 18px;
+  opacity: 1;
 }
 .order-form-area .btn-order-area {
   margin-top: 20px;
@@ -2273,6 +2320,25 @@ body.scroll-off {
 
 .ico-new {
   margin-left: 4px;
+}
+
+.dimmed-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.dimmed-layer.hidden {
+  opacity: 0;
+}
+.dimmed-layer.light {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .badge-popular {

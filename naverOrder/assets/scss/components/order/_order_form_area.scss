@@ -26,16 +26,24 @@
       width: 56px;
       height: 56px;
 
-      .ico-close {
-        width: 18px;
-      }
-    }
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      z-index: 10;
+    }
+
+    .ico-close {
+      width: 18px;
+      opacity: 1;
+    }
+
+  }
+  
   .btn-order-area {
     margin-top: 20px;
     @include common-inner;
-
+    
     .btn-order {
       display: flex;
       justify-content: center;
@@ -48,7 +56,7 @@
       font-weight: 700;
       background-color: $booking-color-bg301;
       color: #fff;
-
+      
       .ico-n-logo {
         width: 18px;
         height: 18px;
@@ -56,10 +64,9 @@
       }
     }
   }
-
+  
   .go-to-top {
     padding: 26px 0;
     background-color: none;
   }
 }
-

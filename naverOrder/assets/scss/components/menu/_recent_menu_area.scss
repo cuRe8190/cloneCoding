@@ -90,6 +90,21 @@
     background-color: $booking-color-bg8;
 
     display: flex;
+
+    .num {
+      position: absolute;
+      top: 6px;
+      right: 4px;
+      width: 10px;
+      height: 10px;
+      line-height: 10px;
+      border-radius: 50%;
+      background-color: $point-color;
+      font-size: 8px;
+      font-weight: 800;
+      text-align: center;
+      color: #fff;
+    }
   }
 
   .ico-cart {
