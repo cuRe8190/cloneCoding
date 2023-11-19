@@ -22,7 +22,8 @@
       color: #fff;
     }
 
-    &:disabled {
+    &:disabled,
+    &.disabled {
       color: $booking-color-border102;
     }
 
