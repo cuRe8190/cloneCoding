@@ -3,44 +3,44 @@
   align-items: center;
   padding: $m-padding;
   margin: 0 -1*$m-padding;
-  border-bottom: 1px solid $booking-color-bg144;
 
   &:not(:last-child) {
-    border-bottom: 1px solid $booking-color-bg144;
+    border-bottom: 1px solid $booking-color-border144;
   }
 
   .menu-detail {
     display: flex;
     align-items: center;
     flex: 1;
+  }
 
-    .menu-img-area {
-      position: relative;
-      flex-shrink: 0;
-      margin-right: 12px;
-      border-radius: 5px;
-      overflow: hidden;
+  .menu-img-area {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border-radius: 5px;
+    overflow: hidden;
 
-      width: 100px;
-      height: 110px;
+    width: 100px;
+    height: 110px;
 
-      &:not(.no-img)::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    &:not(.no-img)::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-        background-color: rgba(0, 0, 0, 0.06);
-      }
-      
-      .menu-img {
-        display: block;
-        object-fit: cover;
-      }
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+    
+    .menu-img {
+      display: block;
+      object-fit: cover;
     }
   }
+
 
   .menu-desc {
     margin-top: 4px;
@@ -99,42 +99,44 @@
   }
 }
 
-.menu-name-group {
-  display: flex;
-  align-items: center;
+.menu-info-area {
+  width: 100%;
+  .menu-name-group {
+    display: flex;
+    align-items: center;
 
-  .menu-name {
-    font-size: 17px;
-    line-height: 22px;
-    font-weight: 700;
-    color: $booking-color-text6;
-  }
-
-  .ico-new {
-    margin-left: 4px;
-  }
-
-  .badge-popular {
-    margin-left: 6px;
-  }
-}
-
-.menu-info-group {
-  display: flex;
-  flex-shrink: 0;
-  margin-top: 4px;
-  font-size: 14px;
-
-  .menu-number-of-order {
-    color: $booking-color-text5;
-    letter-spacing: -0.4px;
-
-    strong {
-      margin-left: 4px;
-      font-weight: 800;
-      font-style: normal;
+    .menu-name {
+      font-size: 17px;
+      line-height: 22px;
+      font-weight: 700;
       color: $booking-color-text6;
     }
 
+    .ico-new {
+      margin-left: 4px;
+    }
+
+    .badge-popular {
+      margin-left: 6px;
+    }
+  }
+
+  .menu-info-group {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 4px;
+    font-size: 14px;
+
+    .menu-number-of-order {
+      color: $booking-color-text5;
+      letter-spacing: -0.4px;
+
+      strong {
+        margin-left: 4px;
+        font-weight: 800;
+        font-style: normal;
+        color: $booking-color-text6;
+      }
+    }
   }
 }

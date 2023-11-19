@@ -1,0 +1,65 @@
+.order-form-area {
+  .page-title-area {
+    height: 105px;
+    background: linear-gradient(246deg, #7F7FD5 0%, #86A8E7 50%, #91eae4 100%);
+
+    .title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 56px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(246deg, #7F7FD5 0%, #86A8E7 50%, #91eae4 100%);
+      z-index: 10;
+    }
+
+    .btn-close {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 56px;
+      height: 56px;
+
+      .ico-close {
+        width: 18px;
+      }
+    }
+  }
+
+  .btn-order-area {
+    margin-top: 20px;
+    @include common-inner;
+
+    .btn-order {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px $m-padding 0;
+      width: calc(100% - #{$m-padding}*2);
+      height: 50px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      background-color: $booking-color-bg301;
+      color: #fff;
+
+      .ico-n-logo {
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .go-to-top {
+    padding: 26px 0;
+    background-color: none;
+  }
+}
+
