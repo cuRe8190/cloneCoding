@@ -186,3 +186,8 @@ li {
 ul .now {
   background-color: #329fff;
 }
+
+#fill-heart {
+  display: none;
+  color: #dc2f63;
+}
